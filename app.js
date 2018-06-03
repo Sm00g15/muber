@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 routes(app);
 
 app.use((err, req, res, next) => {
-	
+	 res.send({error: err.message})
 });
 
 module.exports = app;
